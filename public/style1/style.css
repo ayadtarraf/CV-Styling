@@ -1,0 +1,266 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+
+  header {
+    background-color: #999999;
+    padding: 0 25%;
+  }
+  
+  header div {
+    display: flex;
+    margin-left: 20px;
+  }
+  
+  header div hgroup {
+    color: red;
+  }
+  
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 25%;
+    margin-top: 40px;
+  }
+  
+  .content section:not(:last-child) {
+    flex-basis: 50%;
+  }
+  
+  section:not(:last-child) h3 {
+    border-bottom: 1px solid #cccccc;
+    padding-bottom: 10px;
+    position: relative;
+    padding-left: 25px;
+  }
+  
+  section:not(:last-child) p {
+    padding-right: 10px;
+  }
+  
+  section:not(:last-child) h3::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: -2px;
+    left: 0;
+    background-color: red;
+    border-radius: 50%;
+  }
+  
+  .content section:first-child p {
+    padding-top: 15px;
+  }
+  
+  #competencies .skills-primary {
+    margin-top: 35px;
+    position: relative;
+  }
+  
+  #competencies .skills-primary::before {
+    content: "Main";
+    position: absolute;
+    top: -20px;
+    left: 0;
+    font-size: 18px;
+  }
+  
+  
+  #competencies .skill {
+    background-color: #cccccc;
+    margin-bottom: 5px;
+    padding: 5px;
+    width: 100%;
+    margin-left: 5px;
+  }
+  
+  #competencies .skill span {
+    background-color: red;
+    display: block;
+    padding: 6px;
+    color: #fff;
+  }
+  
+  #competencies .skills-primary .skill:first-child span {
+    width: 50%;
+  }
+  
+  #competencies .skills-primary .skill:nth-child(2) span {
+    width: 30%;
+  }
+  
+  #competencies .skills-primary .skill:last-child span {
+    width: 10%;
+  }
+  
+  #competencies .skills-secondary .skill:first-child span {
+    width: 90%;
+  }
+  
+  #competencies .skills-secondary .skill:nth-child(2) span {
+    width: 50%;
+  }
+  
+  #competencies .skills-secondary .skill:last-child span {
+    width: 70%;
+  }
+  
+  #competencies .skills-secondary {
+    margin-top: 40px;
+    position: relative;
+  }
+  
+  #competencies .skills-secondary::before {
+    content: "Other";
+    position: absolute;
+    top: -20px;
+    left: 0;
+    font-size: 18px;  
+  }
+  
+  .experience  h4 {
+    color: red;
+    margin-top: 20px;
+  }
+  
+  .experience h4 span:last-child {
+    font-weight: 100;
+    position: relative;
+  }
+  
+  .experience h4 span:last-child::before {
+    content: "@";
+    top: 0;
+    left: 0;
+    margin-right: 5px;
+  }
+  
+  .experience .experience-details {
+    margin-left: 10px;
+    margin-top: 5px;
+  }
+  
+  .experience .experience-details span {
+    color: #aeaeae;
+  }
+  
+  .experience .experience-date span:nth-child(even) {
+    color: red;
+  }
+  
+  .experience .experience-description {
+    margin-top: 10px;
+  }
+  
+  section {
+    margin-bottom: 40px;
+  }
+  
+  #hobbies ul {
+    margin-left: 40px;
+    margin-top: 20px;
+  }
+  
+  #contact .contacts dl {
+    display: flex;
+    background-color: #000;
+  }
+  
+  #contact .contacts dl dt {
+    width: 120px;
+    background-color: red;
+    color: #fff;
+    padding-left: 5px;
+    padding-bottom: 5px;
+  }
+  
+  #contact .contacts a {
+    color: red;
+    text-decoration: none;
+    margin-left: 5px;
+  }
+  
+  #contact {
+    position: absolute;
+    top: 15px;
+    right: 400px;
+    width: 560px;
+  }
+  
+  #contact h3 {
+    display: none;
+  }
+
+  @media (max-width: 1400px) {
+
+    .content section {
+      flex-basis: 100% !important;
+    }
+  
+    section:last-child h3::before {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      top: -2px;
+      left: 0;
+      background-color: red;
+      border-radius: 50%;
+    }
+  
+    section:last-child h3 {
+      border-bottom: 1px solid #cccccc;
+      padding-bottom: 10px;
+      position: relative;
+      padding-left: 25px;
+    }
+  
+    #contact {
+      position: relative;
+      width: auto;
+      top: 0;
+      right: 0;
+    }
+  
+    .contacts {
+      margin-top: 10px;
+    }
+  
+    #contact h3 {
+      display: block;
+    }
+  
+    #contact .contacts dl {
+      background-color: #fff;
+    }
+  
+    #contact .contacts dl dt {
+      width: 120px;
+      background-color: red;
+    }
+  }
+  
+  @media (max-width: 767px) {
+  
+    header {
+      padding: 20px 0;
+    }
+  
+    header div {
+      flex-direction: column;
+    }
+  
+    header div figure {
+      margin-left: 10px;
+    }
+  
+    .content {
+      margin-right: 0;
+      margin-left: 0;
+      padding: 0 15px;
+    }
+  }
